@@ -1,4 +1,4 @@
-name: Test Flow
+name: Test TEv2 Workflow
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  run-bun-packages:
+  test-tev2:
     runs-on: ubuntu-latest
 
     steps:
