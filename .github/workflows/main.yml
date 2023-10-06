@@ -18,10 +18,13 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Install dependencies
-      run: bun add @aviarytech/tev2-ingress @aviarytech/tev2-hrgt @tno-terminology-design/mrg-import
+      run: bun add @aviarytech/tev2-ingress @aviarytech/tev2-hrgt @tno-terminology-design/mrgt @tno-terminology-design/mrg-import
 
     - name: Run @aviarytech/tev2-ingress
       run: bun run tev2-ingress -c config.yaml
+    
+    - name: Run @tno-terminology-design/mrgt
+      run: bun run mrgt -s .
 
     - name: Run @tno-terminology-design/mrg-import
       run: bun run mrg-import -s .
