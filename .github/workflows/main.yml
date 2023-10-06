@@ -1,0 +1,29 @@
+name: Test Flow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  run-bun-packages:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Install bun.sh
+      run: curl -sSL https://get.bun.sh | bash
+
+    - name: Install dependencies
+      run: bun add @aviarytech/ingress @aviarytech/hrgt @tno-terminology-design/mrg-import
+
+    - name: Run @aviarytech/ingress
+      run: bun run @aviarytech/ingress
+
+    - name: Run @tno-terminology-design/mrg-import
+      run: bun run @tno-terminology-design/mrg-import
+
+    - name: Run @aviarytech/hrgt
+      run: bun run @aviarytech/hrgt
