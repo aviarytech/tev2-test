@@ -29,5 +29,8 @@ jobs:
     - name: Run @tno-terminology-design/mrg-import
       run: bun run mrg-import -s .
 
+    - name: log
+      run: ls
+
     - name: Run @aviarytech/tev2-hrgt
       run: bun run tev2-hrgt
