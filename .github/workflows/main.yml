@@ -32,6 +32,12 @@ jobs:
     - name: Run @aviarytech/tev2-hrgt
       run: bun run tev2-hrgt glossaries/mrg*
       
+    - name: Archive code coverage results
+      uses: actions/upload-artifact@v3
+      with:
+        name: hrgt
+        path: default.html
+        
   deploy:
     # Add a dependency to the build job
     needs: build
@@ -50,3 +56,5 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
+        with:
+          artifact_name: hrgt
