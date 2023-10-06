@@ -24,7 +24,7 @@ jobs:
       run: bun run tev2-ingress -c config.yaml
 
     - name: Run @tno-terminology-design/mrg-import
-      run: bun run @tno-terminology-design/mrg-import
+      run: bun run mrg-import
 
     - name: Run @aviarytech/tev2-hrgt
       run: bun run tev2-hrgt
