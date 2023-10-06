@@ -13,7 +13,5 @@ scope:
       id: brian
       at: aviary.tech
 scopes: #
-  - scopetag: ctwg # definition of (scope)tag(s) that are used within this scope to refer to a specific terminology
-    scopedir: https://github.com/trustoverip/ctwg # URL of the scope-directory
 versions:
   - vsntag: test # a versiontag that identifies this version from all other versions in the SAF
