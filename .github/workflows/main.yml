@@ -30,7 +30,7 @@ jobs:
       run: bun run mrg-import -s .
 
     - name: log
-      run: ls
+      run: ls glossaries
 
     - name: Run @aviarytech/tev2-hrgt
       run: bun run tev2-hrgt
