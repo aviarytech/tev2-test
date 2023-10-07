@@ -1,0 +1,16 @@
+{
+  "name": "tev2-test",
+  "type": "module",
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@aviarytech/tev2-hrgt": "^0.0.10",
+    "@aviarytech/tev2-ingress": "^0.0.5",
+    "@tno-terminology-design/mrg-import": "^0.1.4",
+    "@tno-terminology-design/mrgt": "^0.1.3"
+  }
+}
