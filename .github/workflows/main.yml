@@ -13,56 +13,54 @@ jobs:
     steps:
     - name: Setup Bun
       uses: oven-sh/setup-bun@v1
-            
     - name: Checkout code
       uses: actions/checkout@v2
-
     - name: Install dependencies
       run: bun add @aviarytech/tev2-ingress @aviarytech/tev2-hrgt @tno-terminology-design/mrgt @tno-terminology-design/mrg-import
-
     - name: Run @aviarytech/tev2-ingress
-      run: bun run tev2-ingress -c config.yaml
-    
+      run: bun tev2-ingress -c config.yaml
     - name: Run @tno-terminology-design/mrgt
-      run: bun run mrgt -s .
-
+      run: bun mrgt -s .
     - name: Run @tno-terminology-design/mrg-import
-      run: bun run mrg-import -s .
-
+      run: bun mrg-import -s .
     - name: Run @aviarytech/tev2-hrgt
-      run: bun run tev2-hrgt glossaries/mrg*
-      
-    - name: Archive code coverage results
-      uses: actions/upload-artifact@v3
+      run: bun tev2-hrgt glossaries/mrg*
+    - run: mkdir deploy && mv index.html deploy
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v3
       with:
-        name: github-pages
-        path: index.html
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./deploy
+    # - name: Archive code coverage results
+    #   uses: actions/upload-artifact@v3
+    #   with:
+    #     name: github-pages
+    #     path: index.html
         
-  deploy:
-    # Add a dependency to the build job
-    needs: build
+  # deploy:
+  #   needs: build
 
-    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
-    permissions:
-      pages: write
-      id-token: write
-    # Deploy to the github-pages environment
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  #   # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
+  #   permissions:
+  #     pages: write
+  #     id-token: write
+  #   # Deploy to the github-pages environment
+  #   environment:
+  #     name: github-pages
+  #     url: ${{ steps.deployment.outputs.page_url }}
 
-    runs-on: ubuntu-latest
-    steps:
-      - run: pwd
-      - name: Download artifacts
-        uses: actions/download-artifact@v2
-        with:
-          name: github-pages
-          path: ./downloaded-artifact
-      - name: ls
-        run: ls -al ./downloaded-artifact
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v2
-        with:
-          artifact_name: github-pages
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - run: pwd
+  #     - name: Download artifacts
+  #       uses: actions/download-artifact@v2
+  #       with:
+  #         name: github-pages
+  #         path: ./downloaded-artifact
+  #     - name: ls
+  #       run: ls -al ./downloaded-artifact
+  #     - name: Deploy to GitHub Pages
+  #       id: deployment
+  #       uses: actions/deploy-pages@v2
+  #       with:
+  #         artifact_name: github-pages
