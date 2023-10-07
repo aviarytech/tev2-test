@@ -57,6 +57,8 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: github-pages
+      - name: ls
+        run: ls -al github-pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
