@@ -1,5 +1,5 @@
 ---
-githubRepo: https://github.com/trustoverip/hxwg.wiki.git
+githubRepo: https://github.com/aviarytech/tev2-test.wiki.git
 # TEv2 Curated Text Header
 term: curated-text
 termType: concept
@@ -10,9 +10,9 @@ groupTags:
 formPhrases: curated-text{ss}, ctext{ss}
 # Curation status
 status: proposed
-created: 2022-06-02
-updated: 2022-08-04
+created: 2023-10-31
+updated: 2023-10-31
 # Origins/Acknowledgements
-contributors: RieksJ
-attribution: "[eSSIF-Lab](https://essif-lab.github.io/framework)"
+contributors: BrianR
+attribution: "[Aviary Tech](https://aviary.tech)"
 originalLicense: "[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/?ref=chooser-v1)"

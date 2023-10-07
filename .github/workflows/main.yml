@@ -30,7 +30,7 @@ jobs:
       run: bun mrg-import -s .
       
     - name: Run @aviarytech/tev2-hrgt
-      run: bun tev2-hrgt glossaries/mrg*
+      run: bun tev2-hrgt glossaries/mrg* -o 
       
     - run: mkdir deploy && mv index.html deploy
     
