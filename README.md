@@ -2,6 +2,13 @@
 
 [![Test TEv2 Workflow](https://github.com/aviarytech/tev2-test/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/aviarytech/tev2-test/actions/workflows/main.yml)
 
+This repository contains a test workflow for the Terminology Engine v2. It relies on the following tools:
+
+* @aviarytech/tev2-ingress
+* @tno-terminology-design/mrgt-import
+* @tno-terminology-design/mrgt
+* @aviarytech/tev2-hrgt
+
 To install dependencies:
 
 ```bash
