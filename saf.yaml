@@ -1,6 +1,6 @@
 scope:
   scopetag: tev2 # identifier that curators have determined for this terminology
-  scopedir: https://github.com/aviarytech/tev2-test # URL of the scope-directory
+  scopedir: https://github.com/aviarytech/tev2-test/tree/master # URL of the scope-directory
   curatedir: curated-texts # directory where all curated files are located. Full URL is `scopedir`/`curatedir`
   glossarydir: glossaries # directory where all glossary files and related stuff are located. Full URL is `scopedir`/`glossarydir`
   defaultvsn: latest # vsntag that identifies the default terminology. MRG is located at `scopedir`/`glossarydir`/mrg.`scopetag`.`defaultvsn`.yaml
@@ -12,5 +12,10 @@ scope:
     email:
       id: brian
       at: aviary.tech
+  mrgfile: mrg.tev2.terms.yaml
+  
 versions:
-  - vsntag: latest # a versiontag that identifies this version from all other versions in the SAF
+  - vsntag: terms # this version contains all terms that are curated within this scope
+    altvsntags: [latest] # alternative verstiontags
+    termselcrit:
+      - "*" # import all tev2 terms.

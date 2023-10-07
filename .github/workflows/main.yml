@@ -1,6 +1,7 @@
 name: Test TEv2 Workflow
 
 on:
+  gollum:
   push:
     branches:
       - master
