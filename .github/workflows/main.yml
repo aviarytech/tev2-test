@@ -60,7 +60,7 @@ jobs:
           name: github-pages
           path: ./downloaded-artifact
       - name: ls
-        run: ls -al github-pages
+        run: ls -al ./downloaded-artifact
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
