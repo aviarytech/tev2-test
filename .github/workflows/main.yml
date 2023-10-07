@@ -53,11 +53,12 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/setup-node@v3
+      - name: Download artifacts
+        uses: actions/download-artifact@v2
         with:
-          node-version: 'lts/Hydrogen'
-      - name: log
-        run: ls
+          name: github-pages
+      - name: List artifact contents
+        run: ls -R github-pages
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
