@@ -12,7 +12,5 @@ scope:
     email:
       id: brian
       at: aviary.tech
-scopes: # no imports
-- scopetag: tev2 # definition of (scope) tag(s) that are used within this scope to refer to a specific terminology
 versions:
   - vsntag: latest # a versiontag that identifies this version from all other versions in the SAF
