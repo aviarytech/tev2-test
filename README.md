@@ -1,5 +1,7 @@
 # tev2-test
 
+[![Test TEv2 Workflow](https://github.com/aviarytech/tev2-test/actions/workflows/main.yml/badge.svg?branch=master)](https://github.com/aviarytech/tev2-test/actions/workflows/main.yml)
+
 To install dependencies:
 
 ```bash
