@@ -53,10 +53,12 @@ jobs:
 
     runs-on: ubuntu-latest
     steps:
+      - run: pwd
       - name: Download artifacts
         uses: actions/download-artifact@v2
         with:
           name: github-pages
+          path: ./downloaded-artifact
       - name: ls
         run: ls -al github-pages
       - name: Deploy to GitHub Pages
