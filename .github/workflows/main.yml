@@ -36,7 +36,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: hrgt
-        path: default.html
+        path: index.html
         
   deploy:
     # Add a dependency to the build job
