@@ -25,6 +25,11 @@ jobs:
       run: bun run build
       
     - run: mkdir deploy && mv index.html deploy
+    
+    - uses: actions/upload-artifact@v3
+      with:
+        name: github-pages
+        path: deploy
 
     # - name: Deploy 🚀
     #   uses: JamesIves/github-pages-deploy-action@v4
