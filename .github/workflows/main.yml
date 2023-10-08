@@ -25,9 +25,14 @@ jobs:
       run: bun run build
       
     - run: mkdir deploy && mv index.html deploy
-    
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v3
+
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@v4
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./deploy
+        folder: deploy
+    
+    # - name: Deploy
+    #   uses: peaceiris/actions-gh-pages@v3
+    #   with:
+    #     github_token: ${{ secrets.GITHUB_TOKEN }}
+    #     publish_dir: ./deploy
