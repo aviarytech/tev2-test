@@ -4,10 +4,15 @@
 
 This repository contains a test workflow for the Terminology Engine v2. It relies on the following tools:
 
-* @aviarytech/tev2-ingress
-* @tno-terminology-design/mrgt-import
-* @tno-terminology-design/mrgt
-* @aviarytech/tev2-hrgt
+* [@aviarytech/tev2-ingress](https://github.com/aviarytech/tev2-ingress)
+* [@tno-terminology-design/mrg-import](https://github.com/tno-terminology-design/mrg-import)
+* [@tno-terminology-design/mrgt](https://github.com/tno-terminology-design/mrgt)
+* [@aviarytech/tev2-hrgt](https://github.com/aviarytech/tev2-hrgt)
+
+It does not yet incorporate
+
+* [@tno-terminology-design/trrt](https://github.com/tno-terminology-design/trrt)
+
 
 To install dependencies:
 
@@ -15,11 +20,9 @@ To install dependencies:
 bun install
 ```
 
-To run:
+To run the TEv2 workflow:
 
 ```bash
-bun tev2-ingress -c config.yaml
-bun mrgt -s . -v latest
-bun tev2-hrgt glossaries/*
+bun run build
 ```
 
