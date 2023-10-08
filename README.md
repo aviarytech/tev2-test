@@ -15,7 +15,21 @@ It does not yet incorporate
 
 The [Wiki](https://github.com/aviarytech/tev2-test/wiki) of this repository contains the glossary being used for testing.
 
-[Create New Term](https://github.com/aviarytech/tev2-test/wiki/new?template=new-term.md&title=%5BTERM%5D+%3Cword+or+phrase+you+are+adding%3E)
+[Create New Term](https://github.com/aviarytech/tev2-test/wiki/new) with the following template
+
+```md
+# Title
+>_The title at the top of this page ^^^ should be the term you are defining. Avoid capitalization unless necessary. If the term has an acronym or short form, provide the full form first, followed by the short form in parentheses._
+
+## Definition
+>_Begin with a concise explanation of the term. The initial sentence will serve as hovertext for hyperlinks, so keep it succinct. Expand on the definition as needed, clarifying how to distinguish instances of the concept, addressing common misconceptions, and linking to other definitions in the glossary when a term is synonymous with an already defined term._
+
+## Usage Examples
+>_Though optional, it's recommended to include one or more brief excerpts or links illustrating how the term is employed within the relevant community. Sources could range from specifications, github issues, to whitepapers._
+
+## Tags
+>_Include any relevant hash tags in a single line that could help in categorizing or grouping_ 
+```
 
 
 To install dependencies:
