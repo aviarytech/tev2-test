@@ -26,10 +26,9 @@ jobs:
       
     - run: mkdir deploy && mv index.html deploy
     
-    - uses: actions/upload-artifact@v3
-      with:
-        name: github-pages
-        path: deploy/index.html
+    - uses: actions/upload-pages-artifact@v1
+      with: 
+        path: .deploy/
 
     # - name: Deploy 🚀
     #   uses: JamesIves/github-pages-deploy-action@v4
