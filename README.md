@@ -15,7 +15,7 @@ It does not yet incorporate
 
 The [Wiki](https://github.com/aviarytech/tev2-test/wiki) of this repository contains the glossary being used for testing.
 
-[Create New Term] (https://github.com/aviarytech/tev2-test/wiki/new?template=new-term.md&title=%5BTERM%5D+%3Cword+or+phrase+you+are+adding%3E)
+[Create New Term](https://github.com/aviarytech/tev2-test/wiki/new?template=new-term.md&title=%5BTERM%5D+%3Cword+or+phrase+you+are+adding%3E)
 
 
 To install dependencies:
