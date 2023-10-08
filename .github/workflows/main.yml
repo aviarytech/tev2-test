@@ -21,17 +21,8 @@ jobs:
     - name: Install dependencies
       run: bun install
       
-    - name: Run @aviarytech/tev2-ingress
-      run: bun tev2-ingress -c config.yaml
-            
-    # - name: Run @tno-terminology-design/mrg-import
-    #   run: bun mrg-import -s .
-      
-    - name: Run @tno-terminology-design/mrgt
-      run: bun mrgt -s .
-      
-    - name: Run @aviarytech/tev2-hrgt
-      run: bun tev2-hrgt glossaries/mrg2.tev2.latest.yaml
+    - name: Build
+      run: bun run build
       
     - run: mkdir deploy && mv index.html deploy
     
