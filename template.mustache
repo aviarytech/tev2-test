@@ -1,38 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="styles.css">
-<title>TEv2 Test Glossary</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>TEv2 Test Glossary</title>
+  <style>
+    body {
+      font-family: 'Helvetica', sans-serif;
+      background-color: #F8F9FA;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #343A40;
+      color: white;
+      text-align: center;
+      padding: 1em;
+    }
+    footer {
+      background-color: #343A40;
+      color: white;
+      text-align: center;
+      padding: 1em;
+    }
+    h1 {
+      margin: 0;
+    }
+    ul {
+      max-width: 800px;
+      margin: 2em auto;
+      padding: 20px;
+      background-color: #FFFFFF;
+      border-radius: 8px;
+      list-style: none;
+    }
+    li {
+      margin: 16px 0;
+      border-bottom: 1px solid #CCC;
+      padding: 8px 0;
+    }
+    li:last-child {
+      border-bottom: none;
+    }
+    .glossary-term {
+      font-weight: bold;
+      color: #333;
+    }
+  </style>
 </head>
 <body>
-<div class="glossary-container">
-<h1>TEv2 Test Glossary</h1>
-<ul class="glossary-list">
-{{#entries}}
-<li class="glossary-item">
-  <div class="glossary-term">
-    <strong>Term:</strong> {{term}}
+  <div class="glossary-container">
+    <header>
+      <h1>TEv2 Test Glossary</h1>
+    </header>
+    <ul class="glossary-list">
+    {{#entries}}
+      <li class="glossary-item">
+        <div class="glossary-term">
+          {{term}}
+        </div>
+        <div class="glossary-definition">
+          {{#glossaryText}}
+            {{.}}
+          {{/glossaryText}}
+          {{^glossaryText}}
+            No glossary text available.
+          {{/glossaryText}}
+        </div>
+        {{#altterms}}
+        <div class="glossary-alternatives">
+          <strong>Alternative Terms:</strong> {{.}}
+        </div>
+        {{/altterms}}
+      </li>
+    {{/entries}}
+    </ul>
   </div>
-  <div class="glossary-definition">
-    <strong>Definition:</strong>
-    {{#glossaryText}}
-      {{.}}
-    {{/glossaryText}}
-    {{^glossaryText}}
-      No glossary text available.
-    {{/glossaryText}}
-  </div>
-  {{#altterms}}
-  <div class="glossary-alternatives">
-    <strong>Alternative Terms:</strong> {{.}}
-  </div>
-  {{/altterms}}
-</li>
-{{/entries}}
-</ul>
-</div>
 </body>
 <footer>© 2022 Aviary Tech</footer>
 </html>
