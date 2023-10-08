@@ -31,7 +31,7 @@ jobs:
       run: bun mrgt -s .
       
     - name: Run @aviarytech/tev2-hrgt
-      run: bun tev2-hrgt glossaries/mrg* 
+      run: bun tev2-hrgt glossaries/mrg2.tev2.latest.yaml
       
     - run: mkdir deploy && mv index.html deploy
     
