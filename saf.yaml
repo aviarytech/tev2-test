@@ -16,8 +16,11 @@ scope:
   website: https://aviarytech.github.io/tev2-test/
   navpath: /terms
 scopes:
-- scopetag: tev2-test # definition of (scope) tag(s) that are used within this scope to refer to a specific terminology
-  scopedir: https://github.com/aviarytech/tev2-test/tree/master # URL of the scope-directory
+# - scopetag: tev2-test # definition of (scope) tag(s) that are used within this scope to refer to a specific terminology
+#   scopedir: https://github.com/aviarytech/tev2-test/tree/master # URL of the scope-directory
+- scopetag: essiflab # definition of (scope) tag(s) that are used within this scope to refer to a specific terminology
+  vsntag: default
+  scopedir: https://github.com/Ca5e/framework/tree/master/docs # URL of the scope-directory
 versions:
   - vsntag: terms # this version contains all terms that are curated within this scope
     altvsntags: [latest] # alternative verstiontags

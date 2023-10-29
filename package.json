@@ -4,8 +4,9 @@
   "scripts": {
     "build:tev2-ingress": "bun tev2-ingress -c config.yaml",
     "build:mrgt": "bun mrgt -s . -v terms",
+    "build:mrg-import": "bun mrg-import -o warn -s .",
     "build:tev2-hrgt": "bun tev2-hrgt glossaries/mrg.tev2.latest.yaml",
-    "build": "npm run build:tev2-ingress && npm run build:mrgt && npm run build:tev2-hrgt"
+    "build": "npm run build:tev2-ingress && npm run build:mrg-import && npm run build:mrgt && npm run build:tev2-hrgt"
   },
   "devDependencies": {
     "bun-types": "latest"
@@ -15,8 +16,8 @@
   },
   "dependencies": {
     "@aviarytech/tev2-hrgt": "^0.0.11",
-    "@aviarytech/tev2-ingress": "^0.0.5",
-    "@tno-terminology-design/mrg-import": "^0.1.4",
-    "@tno-terminology-design/mrgt": "^0.1.3"
+    "@aviarytech/tev2-ingress": "^0.0.8",
+    "@tno-terminology-design/mrg-import": "^0.1.5",
+    "@tno-terminology-design/mrgt": "^0.1.5"
   }
 }
